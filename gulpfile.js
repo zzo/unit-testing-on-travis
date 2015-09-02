@@ -46,8 +46,8 @@ gulp.task('travis-karma', function(done) {
   new Karma({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true,
-    reporters: [ 'junit', 'coverage' ],
-    coverageReporter: { type: 'cobertura' },
+    reporters: [ 'progress', 'coverage' ],
+    coverageReporter: { type: 'lcov' },
     browsers: [ 'Firefox' ],
   }, done).start();
 });
