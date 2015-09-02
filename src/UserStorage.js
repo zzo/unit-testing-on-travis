@@ -6,6 +6,7 @@ var UserStorage = {
   find: function(model) {},
   delete: function(id) {},
   add: function(model) {},
+  muckAbout: function(model) {},
   save: function(model) {}
 };
 
