@@ -41,3 +41,13 @@ gulp.task('ci-karma', function(done) {
     browsers: [ 'Chrome', 'Firefox' ],
   }, done).start();
 });
+
+gulp.task('travis-karma', function(done) {
+  new Karma({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true,
+    reporters: [ 'junit', 'coverage' ],
+    coverageReporter: { type: 'cobertura' },
+    browsers: [ 'Firefox' ],
+  }, done).start();
+});
